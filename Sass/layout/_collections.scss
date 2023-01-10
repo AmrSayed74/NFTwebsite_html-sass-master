@@ -1,0 +1,59 @@
+@use "../helpers/index" as *;
+
+// [1]- in Layout Folder there is a file called _layout.scss which contain All layout files 
+
+// [2]- in homepage.scss or other pages like about.scss will be Special Case >> 
+//I mean here you are Not Forced to use @use
+//to import _layout.scss file which contain All layout files 
+
+// [3]- here you can choose some special layout files like _header.scss & _footer.scss 
+//in this case you will use @use to import files that you want, not all files 
+
+.collections {
+  padding-top: $padding ;
+  padding-bottom: $padding;
+
+  .filter-btn {
+    display: flex;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: space-between;
+    .filter {
+      width: 200px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3;
+      background: $alt-textColor;
+      color: #fff;
+      &:hover {
+        background: $main-color;
+      }
+    }
+    .active {
+      transition: 0.3s;
+      background: $main-color;
+    }
+  }
+
+  .collections-content {
+    @include grid;
+    @include box-style;
+
+    .box:hover {
+      transform: scale(1.05) !important ;
+    }
+  }
+}
+@media screen and (max-width: 992px) {
+  .collections .filter-btn {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  .collections .collections-content {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

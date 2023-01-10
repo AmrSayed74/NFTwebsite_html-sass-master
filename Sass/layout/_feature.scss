@@ -1,0 +1,19 @@
+@use "../helpers/index" as *;
+
+
+
+.featured {
+  padding-top: $padding ;
+  padding-bottom: $padding;
+
+  .featured-artworks {
+    @include grid;
+    .box {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    @include box-style;
+  }
+}
+
+

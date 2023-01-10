@@ -1,0 +1,25 @@
+@use "../helpers/index" as *;
+
+.main-button {
+  background: $main-color;
+  color: $main-textColor;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  &:hover{
+    background: $alt-textColor
+  }
+}
+
+
+
+.alt-button {
+  background: $second-color;
+  color: $main-textColor;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: 0.5s;
+  &:hover{
+    background: $alt-textColor
+  }
+}

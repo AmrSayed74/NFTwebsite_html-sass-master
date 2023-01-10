@@ -1,0 +1,25 @@
+@use "../helpers/index" as *;
+
+.banner {
+  padding-top: $padding ;
+  padding-bottom: $padding;
+  .banner-text {
+    padding: 40px;
+    background: $main-color;
+    text-align: center;
+    border-radius: 10px;
+    h1 {
+      color: white;
+    }
+    .button-banner {
+      width: fit-content;
+      margin: 0 auto;
+      background: rgba(0, 0, 0, 0.541);
+      &:hover {
+        background: $alt-textColor;
+        color: black;
+        font-weight: 600;
+      }
+    }
+  }
+}

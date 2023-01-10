@@ -1,0 +1,27 @@
+@mixin breakPoints ($point) {
+  @if $point == "mob" {
+    @media (max-width: 576px) {
+      @content;
+    }
+  }
+  @else if $point == "med" {
+    @media (min-width: 577px) and (max-width: 768px) {
+      @content;
+    }
+  }
+  @else if $point == "lg" {
+    @media (min-width: 769px) and (max-width: 992px) {
+      @content;
+    }
+  }
+  @else if $point == "x-lg" {
+    @media(min-width: 993px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+  @else if $point == "xx-lg" {
+    @media (min-width: 1201px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@use "../helpers/variables" as *;
+
+@mixin grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+@mixin box-style {
+  .box {
+    transition: 0.5s !important;
+    padding: 20px;
+    background: $second-color;
+    border-radius: 10px;
+    
+    .text {
+      margin: 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .first-row {
+        color: $alt-textColor;
+      }
+      .sec-row {
+        color: $main-textColor;
+        font-size: 17px;
+      }
+    }
+    .collections-button {
+      margin-top: 20px;
+      text-align: center;
+      font-size: 18px;
+      font-weight: bold;
+      transition: 0.3s;
+      &:hover {
+        color: #000;
+      }
+    }
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.315);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

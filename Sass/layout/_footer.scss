@@ -1,0 +1,66 @@
+@use "../helpers/index" as*;
+@use "../components/components" as*;
+
+
+.footer {
+  padding-top: $padding ;
+  padding-bottom: $padding;
+  .footer-content {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 10px;
+
+    .col {
+      padding: 15px;
+
+      .col-text {
+        color: $alt-textColor;
+        margin-top: 20px;
+        display: block;
+        line-height: 1.5;
+        min-width: 100%;
+      }
+      h2 {
+        text-align: center;
+        color: #fff;
+        margin: 0;
+      }
+      ul {
+        margin-top: 20px;
+        text-align: center;
+        li {
+        padding: 10px;
+          &:hover a {
+            color: #fff;
+          }
+          a {
+            color: $alt-textColor;
+            transition: 0.3s;
+          }
+        }
+      }
+      .social {
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        text-align: center;
+        justify-content: center;
+        img {
+          width: 30px;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.copy-right {
+  background-color: $second-color;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+.copy-right i {
+  color: red;
+}
